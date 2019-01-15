@@ -99,10 +99,7 @@ int main()
     cout << "Select the type of Quick Sort \n1.) Lomuto scheme (last element as the pivot)\n2.)";
     cout << "Hoare Scheme (Median of high and low as pivot\n";
     cin >> choice;
-    if (choice == 1) 
-        quicksortL(arr, 0, size - 1);
-    else
-        quicksortH(arr, 0, size - 1);
+    choice == 1 ? quicksortL(arr, 0, size - 1) : quicksortH(arr, 0, size - 1);
     printarray(arr, size);
     
     return 0;
