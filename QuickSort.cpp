@@ -3,6 +3,7 @@ Quicksort in CPP
 Using the 
 1.) last element for the sort criteria Lomuto's scheme
 2.) Hoare scheme
+links used: geeksforgeeks
 */
 
 #include<iostream>
