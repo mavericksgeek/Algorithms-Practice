@@ -5,6 +5,21 @@ Bubble sort in cpp
 
 #include<iostream>
 
+void swap(int *a, int *b)
+{
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+void printarray(int arr[], int size)
+{
+  for(int i = 0; i < size; i++)
+  {
+    cout << arr[i] << " ";
+  }
+  cout << "\n";
+}
 using namespace std;
 
 int main()
