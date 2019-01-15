@@ -103,5 +103,7 @@ int main()
         quicksortL(arr, 0, size - 1);
     else
         quicksortH(arr, 0, size - 1);
-        printarray(arr, size);
+    printarray(arr, size);
+    
+    return 0;
 }
