@@ -1,0 +1,51 @@
+// Example program
+
+/**
+Return index of the first occurence of a given number in an unsorted array
+*/
+#include <iostream>
+#include <algorithm>
+
+
+int firstOccurence(int arr[], int size, int num)
+{
+    // time complexity - O(nlogn)
+    // std:: sort(arr, arr + size);             
+    // if(num < arr[0] || num > arr[size - 1])
+    //     return -1;
+    // int i = 0;
+    
+    // while(i < size)
+    // {
+    //     if(num == arr[i])
+    //         return i;
+    //     i++;
+    // }
+    // return -1;
+    
+    // time complexity - O(n)
+    bool isthere = false;
+    int count = 0;
+    for(int i = 0; i < size; i++)
+    {
+        if(arr[i] == num){
+            isthere = true;
+        }
+        else if(arr[i] < num)
+        {
+            count++;
+        }
+    }
+    
+    return((isthere == false)? -1 : count);
+        
+}
+
+int main()
+{
+    int arr[] = {10, 30, 20, 50, 10};
+    int size = sizeof(arr)/ sizeof(arr[0]);
+    int num = 40;
+    int result = firstOccurence(arr, size, num);
+    std :: cout << result;
+}
